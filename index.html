@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Menübild hochladen</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; max-width: 600px; margin: auto; }
+    input, select, button { margin-top: 1rem; width: 100%; padding: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h2>Mittagstisch-Bild hochladen</h2>
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <label>Restaurant:</label>
+    <select name="restaurant" required>
+      <option value="">Bitte wählen</option>
+      <option value="imbiss_pauseneck">Imbiss Pauseneck</option>
+      <option value="pizzeria_positano">Pizzeria Positano</option>
+      <option value="pizzeria_sorrento">Pizzeria Sorrento</option>
+    </select>
+
+    <label>Gültige Woche:</label>
+    <input type="week" name="kw" required>
+
+    <label>Menübild (JPG, PNG, WEBP):</label>
+    <input type="file" name="image" accept=".jpg,.jpeg,.png,.webp" required>
+
+    <button type="submit">Hochladen</button>
+  </form>
+</body>
+</html>
